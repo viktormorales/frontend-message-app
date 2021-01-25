@@ -1,0 +1,23 @@
+{
+  "name": "Msg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktormorales/frontend-message-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viktormorales/frontend-message-app/issues"
+  },
+  "homepage": "https://github.com/viktormorales/frontend-message-app#readme",
+  "devDependencies": {
+    "puppeteer": "^5.5.0"
+  }
+}
