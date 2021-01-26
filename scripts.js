@@ -4,6 +4,9 @@
 // Detecta cuando el HTML DOM (Document Object Mode) está listo
 document.addEventListener("DOMContentLoaded",function() {
     
+    // Poner fecha por defecto a la fecha de hoy
+    document.getElementById('f_fecha').valueAsDate = new Date();
+
     // Inicia el editor de texto en las areas seleccionadas
     const t_buenas = new Quill('#t_buenas', { theme: 'snow' });
     const msgCheckout = new Quill('#msgCheckout', { theme: 'snow' });
