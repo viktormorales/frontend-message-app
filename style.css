@@ -35,4 +35,31 @@
         height: 100%;
     }
 
+
+}
+.nav{
+    margin-top: 20px;
+    margin-left: 10px;
+    
+}
+.container-md{
+    width: 40%;
+    margin-top:200px;
+    border: 2px solid ;
+    padding: 20px;
+    border-color:lightskyblue;
+}
+#pictHotel{
+    margin-left:10px;
+    border-radius: 80%;
+    height: 400px;
+    width: 400px;
+    opacity: 0.9;
+    border: 5px solid #6c757d;
+    padding: 5px;
+   
+}
+.col-md-4{
+    margin-top: 50px;
+   
 }
