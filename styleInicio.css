@@ -11,7 +11,7 @@ body {
     transform: translate(-50%,-50%);
     width: 360px;
     height: 300px;
-    background: white;
+    background: transparent;
     border: 0px;
 }
 .card .image {
@@ -20,6 +20,7 @@ body {
     position: center;
     overflow: hidden;
     border-radius: 20%;
+    background-color: transparent;
 }
 .card .image img {
     width: 100%;
