@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: white;
+    background-size: cover;
     font-family: sans-serif;
 }
 .card {
@@ -36,7 +37,7 @@ body {
     height: 100%;
     transition: .5s;
     transform-origin: left;
-    transform: perspective(2000px) rotateY(-90deg);
+    /*transform: perspective(2000px) rotateY(-90deg);*/
     border-radius: 1rem!important;
 }
 .card:hover .details {
