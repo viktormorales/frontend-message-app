@@ -15,8 +15,8 @@
 
 <body>
     <!-- Formulario -->
-    <div id="msgFormPage" class="container">
-        <form id="msgForm" method="post" action="#">
+    <div id="tplFormPage" class="container">
+        <form id="msgFormPage" method="post" action="#">
             <h3>Crear mensajes</h3>
             <hr>
 
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <input type="submit" id="printBtn" class="btn btn-primary btn-lg" name="printBtn" value="Imprimir">
+                    <input type="submit" id="printBtn" class="btn btn-primary btn-lg" name="continueBtn" value="Continuar">
                 </div>
             </div>
 
@@ -120,7 +120,7 @@
     </div>
 
     <!-- Página de impresión -->
-    <div id="msgPrintPage" class="fs-4">
+    <div id="tplPrintPage" class="container fs-4 d-none">
         <div class="d-flex flex-column align-self-center" style="height:100%;">
             <!-- Cabecera -->
             <div class="d-flex justify-content-between">
@@ -157,6 +157,13 @@
                     Ushuaia – Tierra del Fuego - Argentina<br>
                 </div>
             </div>
+        </div>
+
+        <div class="text-center my-5 d-print-none">
+            <form id="">
+                <input type="button" id="printBtn" class="btn btn-primary btn-lg" name="printBtn" value="Imprimir" onclick="print();">
+                <input type="button" id="backBtn" class="btn btn-secondary btn-lg" value="Volver">
+            </form>
         </div>
     </div>
 
