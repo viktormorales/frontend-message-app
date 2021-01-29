@@ -1,8 +1,3 @@
-/** Oculta la página de impresión de la vista del usuario  */
-#msgPrintPage {
-    display: none;
-}
-
 /** Estilos solo en previsualización de impresión (CTRL+P) */
 @media print {
     @page {
@@ -10,29 +5,26 @@
     }
 
     html, body { height: 100%; }
-    /** Esconde el formulario */
-    #msgFormPage {
-        display: none;
-    }
-    /** Muestra la página a imprimir con los datos del formulario */
-    #msgPrintPage {
-        display: block;
-        height: 100%;
-    }
-    #msgPrintPage::after {
-        content: "";
-        background: url(img/bg.jpg) center center no-repeat;
-        background-size: cover;
-        opacity: 0.2;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;   
-    }
-    #msgPrintPage > div {
-        height: 100%;
-    }
-  
+
+}
+
+/** Muestra la página a imprimir con los datos del formulario */
+#tplPrintPage {
+    display: block;
+    height: 100%;
+}
+#tplPrintPage::after {
+    content: "";
+    background: url(img/bg.jpg) center center no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+#tplPrintPage > div {
+    height: 100%;
 }
