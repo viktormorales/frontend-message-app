@@ -5,7 +5,7 @@
 const router = require('express').Router();
 
 // GET /config
-router.get('/', function(req, res) {
+router.get('/', (req, res) => {
     res.json({ message: 'Recurso: mensajes' })
 });
 
