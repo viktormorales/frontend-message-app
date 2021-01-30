@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <input type="submit" id="printBtn" class="btn btn-primary btn-lg" name="continueBtn" value="Continuar">
+                    <input type="submit" id="continueBtn" class="btn btn-primary btn-lg" name="continueBtn" value="Continuar">
                 </div>
             </div>
 
@@ -120,7 +120,7 @@
     </div>
 
     <!-- Página de impresión -->
-    <div id="tplPrintPage" class="container fs-4 d-none">
+    <div id="tplPrintPage" class="container fs-4 d-none my-5">
         <div class="d-flex flex-column align-self-center" style="height:100%;">
             <!-- Cabecera -->
             <div class="d-flex justify-content-between">
@@ -159,9 +159,9 @@
             </div>
         </div>
 
-        <div class="text-center my-5 d-print-none">
+        <div class="text-center my-5 d-print-none fixed-bottom">
             <form id="">
-                <input type="button" id="printBtn" class="btn btn-primary btn-lg" name="printBtn" value="Imprimir" onclick="print();">
+                <input type="button" id="printBtn" class="btn btn-primary btn-lg" name="printBtn" value="Imprimir">
                 <input type="button" id="backBtn" class="btn btn-secondary btn-lg" value="Volver">
             </form>
         </div>

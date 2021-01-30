@@ -5,7 +5,9 @@
     }
 
     html, body { height: 100%; }
-
+    #tplPrintPage { 
+        margin: 0;
+    }
 }
 
 /** Muestra la página a imprimir con los datos del formulario */
@@ -24,7 +26,4 @@
     right: 0;
     position: absolute;
     z-index: -1;   
-}
-#tplPrintPage > div {
-    height: 100%;
 }
