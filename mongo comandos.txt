@@ -1,0 +1,50 @@
+conocer la version que corre 
+mongod --version.
+
+/* para que corra correctamente y se mantenga, de crea una carpeta data dento de Dicso C llamada "data"
+y luego otra llamada "db"  */
+
+mongod 
+inicio de mongod
+
+/* desde otra consola se ejecuta otro comando en uno se mantiene corriendo el server y el en otro 
+se ejecuta el programa mongo */
+
+mongo
+para conectarnos al servidor local , iniciado con mongod
+
+Base de datos: Almacenamiento de datos. 
+
+Coleccion: organizacion de datos. usuario, categorias,productos. Ej una colecion seria usuario.
+ej en colection User: Se almacena: nombre, apellido, etc 
+lo que lo hace convertirse en un obejto json () javascript
+
+{
+    name: "Luis",
+    surname: "Sanchez",
+    edad: 42,
+    groups ["javascript" , "pascal"]   // lista de string
+}
+compuesto por field -> value
+estos objetos a su vez se conocen como documents. 
+
+Documents seria una colecion de obejtos en su formato json
+
+pasos de inicio.
+1. abrir una consola modo admi  comando:  mongod
+2. abrir otra consola modo admi comando:  mongo // para interactuar con el servidor
+
+cls
+limpiar consola
+Dentro de mongo se pueden utilizar todo javascript. funcines, variables, librerias, objetos, etc
+
+Palabra reservada
+db // te dice a que base de dtoa estas conectado. por defecto el inicio se conecta a una base 
+de datos llamada test
+show dbs // muestras las bases de datos de mongo. 
+help // muestra los comando que usa mongo para interctauar con base de datos.
+
+db.help() // muestra los metodos que se pueden ejecutar con la base de datos. 
+
+minut 27:22
+
