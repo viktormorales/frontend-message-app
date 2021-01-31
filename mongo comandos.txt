@@ -46,5 +46,26 @@ help // muestra los comando que usa mongo para interctauar con base de datos.
 
 db.help() // muestra los metodos que se pueden ejecutar con la base de datos. 
 
-minut 27:22 continuara
+use nombre_baseDatos
+comando para crear una nueva basede datos. cuando se crea, se para sobre ella.
+la base de datos esta vacia, mientras no tenga datos, mongo no la crea,
+
+db.productos.insert({"nombre" : "DELL"})
+comando para insertar una coleccion. enter para insertar.
+db. nombre_colecion.insert({objeto json})
+
+shows collections
+comando para mostrar las coleccion de la base de datos en la que estamos trabajando.
+
+db.dropDatabase()
+comando para borrar la base de datos, siempre asegurarse antes de un dropDatabase, que estemos 
+en la que querramos eliminar.
+
+db.createColletion("nombre_coleccion")
+comando para crear una coleccion.
+
+******con la flecha de arriba se navega en la consola a las lineas que se usaron******
+
+db.nombre_coleccion.drop()
+comando para borrar una coleccion, 
 
