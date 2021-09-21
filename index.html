@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Mensajeria</title>
+</head>
+
+<body>
+    <!-- Formulario -->
+    <div id="tplFormPage" class="container">
+        <form id="msgFormPage" method="post" action="#">
+            <h3>Crear mensajes</h3>
+            <hr>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-floating mb-3">
+                        <input type="number" id="f_hab" class="form-control" placeholder="Suite" required autofocus>
+                        <label for="f_hab">Suite</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" id="f_huesp" class="form-control" placeholder="Huésped">
+                        <label for="f_huesp">Huésped</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3">
+                        <input type="date" id="f_fecha" class="form-control" placeholder="Fecha">
+                        <label for="f_fecha">Fecha</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select id="f_agencia" name="f_agencia" class="form-select" placeholder="Agencia">
+                    <option>Cilene del Faro</option>
+                    <option value="s_allpatagonia">All Patagonia</option>
+                    <option value="s_antartur">Antartur</option>
+                    <option value="s_baquenos">Baquenos</option>
+                    <option value="s_bestour">Best Tour</option>
+                    <option value="s_brasileño">Brasileño</option>
+                    <option value="s_canalfun">Canal Fun</option>
+                    <option value="s_canoero">Canoero</option>
+                    <option value="s_ceciliaMateo">Cecilia de Mateo</option>
+                    <option value="s_conextur">Conextur</option>
+                    <option value="s_criollo">Criollo</option>
+                    <option value="s_destinoAust">Destinos Australes</option>
+                    <option value="s_donAlejo">Don Alejo</option>
+                    <option value="s_drake">Drake Evt</option>
+                    <option value="s_eurotour">EuroTour</option>
+                    <option value="s_heliUsuhaia">Heliushuaa</option>
+                    <option value="s_infoUhsuaia">Info Ushuaia</option>
+                    <option value="s_islaFuego">Isla de los fuegos</option>
+                    <option value="s_latitud">Latitud</option>
+                    <option value="s_nunatak">Nunatak</option>
+                    <option value="s_patagoniaAdv">Patagonia Adventure</option>
+                    <option value="s_piratour">Piratour</option>
+                    <option value="s_prestigio">Prestigio</option>
+                    <option value="s_rumboSur">Rumbo Sur</option>
+                    <option value="s_ryansTtravel">Ryan s Travel</option>
+                    <option value="s_sealand">Sealand</option>
+                    <option value="s_stationTravel">Station Travel</option>
+                    <option value="s_tagle">Tagle</option>
+                    <option value="s_tiempoLibre">Tiempo Libre</option>
+                    <option value="s_tierra">Tierra</option>
+                    <option value="s_tolkeyen">Tolkeyen</option>
+                    <option value="s_travelab">Travel Lab</option>
+                    <option value="s_yehuin">Yehuin Turismo</option>
+                </select>
+                <label for="f_agencia">Agencia</label>
+            </div>
+
+            <label><input type="checkbox" id="messageBox" checked> Adjuntar mensaje</label>
+            <div class="mb-3">
+                <div id="t_buenas">
+                    <p>Buenas tardes, <strong>se comunicaron de su agencia de viajes</strong> para informarles los horarios del día de mañana:</p>
+                    <p><i>Good afternoon, <strong>you have a message from your travel agency</strong> to inform your schedule for tomorrow:</i></p>
+                    <ul>
+                        <li>08:00 - Excursión</li>
+                    </ul>
+                </div>
+            </div>
+
+            <label><input type="checkbox" id="chkOutBox"> Adjuntar horario Check out</label>
+            <div class="mb-3">
+                <div id="msgCheckout">
+                    <p>Les recordamos que <strong>el horario de check-out es a las 10am</strong>. En caso de necesitarlo, tenemos lugar para guardar sus maletas sin costo extra.</p>
+                    <p><i>We remind you that <strong>checkout time is at 10am</strong>. You may leave your baggage in our storage without any extra cost.</i></p>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-8">
+                    <div class="form-floating">
+                        <select name="s_firmas" id="s_firmas" class="form-select" placeholder="Firma">
+                            <option value="s_victor">Victor H. Morales</option>
+                            <option value="s_Igancio">Ignacio Alonso</option>
+                            <option value="s_Jonathar">Jonatan Pitripan</option>
+                            <option value="s_luis">Luis F. Sanchez</option>
+                        </select>
+                        <label for="s_firmas">Firma</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <input type="submit" id="continueBtn" class="btn btn-primary btn-lg" name="continueBtn" value="Continuar">
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Página de impresión -->
+    <div id="tplPrintPage" class="container fs-4 d-none my-5">
+        <div class="d-flex flex-column align-self-center" style="height:100%;">
+            <!-- Cabecera -->
+            <div class="d-flex justify-content-between">
+                <div>
+                    Suite <span id="msgPrintSuite"></span>
+                </div>
+                <div>
+                    <span id="msgPrintDate"></span>
+                </div>
+            </div>
+            <hr class="border-bottom border-3 my-2">
+
+            <div>
+                Estimado/a <span id="msgPrintGuest">h&uacute;esped</span>,<br>
+                Ha recibido un mensaje de: <span id="msgPrintAgency">CILENE DEL FARO</span><br>
+                Hora de recibido: <span id="msgPrintTime">20:00</span>
+            </div>
+            <hr class="border-bottom border-3 my-2">
+
+            <!-- Cuerpo -->
+            <div id="msgPrintBody" class="my-3 p-5"></div>
+
+            <!-- Pie -->
+            <div class="mt-auto">
+                <div class="mb-5">
+                    Atentamente,<br>
+                    <span id="msgPrintSignature"></span><br>
+                    Front Desk
+                </div>
+                <div class="fs-6 p-3 text-center bg-secondary text-light">
+                    Yaganes 74 (9410)<br>
+                    www.cilenedelfaro.com<br>
+                    TEL / FAX: (54 2901) 442500<br>
+                    Ushuaia – Tierra del Fuego - Argentina<br>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center my-5 d-print-none fixed-bottom">
+            <form id="">
+                <input type="button" id="printBtn" class="btn btn-primary btn-lg" name="printBtn" value="Imprimir">
+                <input type="button" id="backBtn" class="btn btn-secondary btn-lg" value="Volver">
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
