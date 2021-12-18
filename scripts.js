@@ -119,4 +119,12 @@ document.addEventListener("DOMContentLoaded", function() {
     
     messages.init();
 
+    new TomSelect(".dynamic-select",{
+        create: true,
+        sortField: {
+            field: "text",
+            direction: "asc"
+        }
+    });
+
 });
