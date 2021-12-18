@@ -8,7 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.0.0-rc.5/dist/css/tom-select.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./MENSAJES/style.css">
 
     <title>Mensajeria</title>
 </head>
@@ -41,8 +42,8 @@
                 </div>
             </div>
 
-            <div class="form-floating mb-3">
-                <select id="f_agencia" name="f_agencia" class="form-select" placeholder="Agencia">
+           
+                <select id="f_agencia" name="f_agencia" class="dynamic-select" placeholder="Agencia">
                     <option>Cilene del Faro</option>
                     <option value="s_allpatagonia">All Patagonia</option>
                     <option value="s_antartur">Antartur</option>
@@ -64,6 +65,7 @@
                     <option value="s_latitud">Latitud</option>
                     <option value="s_nunatak">Nunatak</option>
                     <option value="s_patagoniaAdv">Patagonia Adventure</option>
+                    <option value="s_patagonianWay">Patagonian Way</option>
                     <option value="s_piratour">Piratour</option>
                     <option value="s_prestigio">Prestigio</option>
                     <option value="s_rumboSur">Rumbo Sur</option>
@@ -77,8 +79,7 @@
                     <option value="s_travelab">Travel Lab</option>
                     <option value="s_yehuin">Yehuin Turismo</option>
                 </select>
-                <label for="f_agencia">Agencia</label>
-            </div>
+                
 
             <label><input type="checkbox" id="messageBox" checked> Adjuntar mensaje</label>
             <div class="mb-3">
@@ -86,7 +87,7 @@
                     <p>Buenas tardes, <strong>se comunicaron de su agencia de viajes</strong> para informarles los horarios del día de mañana:</p>
                     <p><i>Good afternoon, <strong>you have a message from your travel agency</strong> to inform your schedule for tomorrow:</i></p>
                     <ul>
-                        <li>08:00 - Excursión</li>
+                        <li>08:00 - EXCURSION</li>
                     </ul>
                 </div>
             </div>
@@ -94,8 +95,8 @@
             <label><input type="checkbox" id="chkOutBox"> Adjuntar horario Check out</label>
             <div class="mb-3">
                 <div id="msgCheckout">
-                    <p>Les recordamos que <strong>el horario de check-out es a las 10am</strong>. En caso de necesitarlo, tenemos lugar para guardar sus maletas sin costo extra.</p>
-                    <p><i>We remind you that <strong>checkout time is at 10am</strong>. You may leave your baggage in our storage without any extra cost.</i></p>
+                    <p>Les recordamos que <strong>el horario de check-out es a las 10HS</strong>. En caso de necesitarlo, tenemos lugar para guardar sus maletas sin costo extra.</p>
+                    <p><i>We remind you that <strong>checkout time is at 10HS</strong>. You may leave your baggage in our storage without any extra cost.</i></p>
                 </div>
             </div>
 
@@ -171,7 +172,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.0.0-rc.5/dist/js/tom-select.complete.min.js"></script>
+    <script src="./MENSAJES/scripts.js"></script>
 </body>
 
 </html>
